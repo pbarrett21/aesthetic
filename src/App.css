@@ -141,5 +141,41 @@ a:first-child {
 hr {
     margin: 2rem 0;
     border-color: #dedede;
-    filter: brightness(95%);
+}
+
+.environments {
+    height: 80vh;
+}
+
+.environments h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 4rem;
+    width: 60vw;
+    margin-bottom: 1.5rem;
+}
+
+.environments p {
+    width: 25vw;
+    line-height: 1.5rem;
+    font-weight: 300;
+}
+
+.environments h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.environments div {
+    margin: 1.5rem 0 1rem 0;
+}
+
+.environments div:last-child {
+    margin: 1rem 0 1rem 0;
+}
+
+.environments-accent {
+    background-color: #D0D0D0;
+    margin: 0 !important;
+    padding: 1.5rem 0 1.5rem 3rem;
 }

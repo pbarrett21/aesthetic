@@ -18,7 +18,7 @@ const Landing: React.FC = () => {
                     alt='modern house'
                 />
             </div>
-            <hr></hr>
+            <hr/>
         </>
     )
 }
