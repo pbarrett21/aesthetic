@@ -6,6 +6,7 @@
     top: 0;
     width: calc(100% - 6rem);
     background-color: #dedede;
+    z-index: 10;
 }
 
 ul {
@@ -175,7 +176,7 @@ hr {
 }
 
 .environments-accent {
-    background-color: #D0D0D0;
+    background-color: #d0d0d0;
     margin: 0 !important;
     padding: 1.5rem 0 1.5rem 4rem;
     display: flex;
@@ -187,4 +188,32 @@ hr {
     height: 18rem;
     width: 18rem;
     transform: translate(14rem, -6rem) rotate(-4deg);
+}
+
+.extraordinary {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.extraordinary h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    word-wrap: break-word;
+    max-width: 13ch;
+    text-align: center;
+    line-height: 4rem;
+}
+
+.bottom-panel {
+    display: flex;
+    justify-content: center;
+}
+
+.bottom-panel img {
+    object-fit: cover;
+    max-width: 25vw;
 }
