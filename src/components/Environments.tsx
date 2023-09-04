@@ -5,15 +5,20 @@ const Environments: React.FC = () => {
         <>
             <div className="environments">
                 <h1>Creating Environments Tailored to You</h1>
-                <div>
+                <div className="env-section">
                     <h2>Commercial Design</h2>
                     <p>{Text.commercialDesign}</p>
                 </div>
                 <div className="environments-accent">
-                    <h2>Residential Design</h2>
-                    <p>{Text.residentialDesign}</p>
+                    <div>
+                        <h2>Residential Design</h2>
+                        <p>{Text.residentialDesign}</p>
+                    </div>
+                    <div>
+                        <img src="src/assets/rotate.jpeg"/>
+                    </div>
                 </div>
-                <div>
+                <div className="env-section">
                     <h2>Interior Styling</h2>
                     <p>{Text.interiorStyling}</p>
                 </div>
