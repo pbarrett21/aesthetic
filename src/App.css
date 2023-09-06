@@ -39,7 +39,7 @@ a:first-child {
     grid-template-rows: 60% 40%;
     justify-items: center;
     align-items: center;
-    height: 80vh;
+    max-height: 80vh;
 }
 
 .img1 {
@@ -145,7 +145,7 @@ hr {
 }
 
 .environments {
-    height: 80vh;
+    max-height: 80vh;
 }
 
 .environments h1 {
@@ -191,7 +191,7 @@ hr {
 }
 
 .extraordinary {
-    height: 80vh;
+    max-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -211,9 +211,37 @@ hr {
 .bottom-panel {
     display: flex;
     justify-content: center;
+    grid-gap: 2rem;
 }
 
 .bottom-panel img {
     object-fit: cover;
     max-width: 25vw;
+}
+
+.left-side, .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-side h2, .left-side p {
+    text-align: right;
+}
+
+
+.right-side h2, .right-side p {
+    text-align: left;
+}
+
+.left-side p, .right-side p {
+    max-width: 38ch;
+    word-wrap: break-word;
+    line-height: 1.5rem;
+    font-weight: 300;
+}
+
+.left-side h2, .right-side h2 {
+    font-weight: 500;
+    font-size: 1.8rem;
 }
