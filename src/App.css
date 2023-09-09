@@ -1,3 +1,7 @@
+:root {
+    --fancy-font: 'DM Serif Display', serif;
+}
+
 .navBar {
     display: flex;
     align-items: center;
@@ -26,7 +30,7 @@ a {
 
 a:first-child {
     font-size: 2rem;
-    font-family: 'DM Serif Display', serif;
+    font-family: var(--fancy-font);
 }
 
 .wrapper {
@@ -68,7 +72,7 @@ a:first-child {
 }
 
 .action .action-title {
-    font-family: 'DM Serif Display', serif;
+    font-family: var(--fancy-font);
     font-size: 5rem;
     line-height: 5rem;
 }
@@ -114,7 +118,7 @@ a:first-child {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: 'DM Serif Display', serif;
+    font-family: var(--fancy-font);
     height: 100%;
     width: 100%;
 }
@@ -149,7 +153,7 @@ hr {
 }
 
 .environments h1 {
-    font-family: 'DM Serif Display', serif;
+    font-family: var(--fancy-font);
     font-size: 4rem;
     width: 60vw;
     margin-bottom: 1rem;
@@ -198,7 +202,7 @@ hr {
 }
 
 .extraordinary h1 {
-    font-family: 'DM Serif Display', serif;
+    font-family: var(--fancy-font);
     font-size: 4rem;
     margin-bottom: 1rem;
     margin-top: 0;
@@ -244,4 +248,38 @@ hr {
 .left-side h2, .right-side h2 {
     font-weight: 500;
     font-size: 1.8rem;
+}
+
+.dreams-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dreams-header h1 {
+    max-width: 15ch;
+    line-height: 4rem;
+    word-wrap: break-word;
+    font-size: 4rem;
+    font-family: var(--fancy-font);
+}
+
+.dreams-header p {
+    max-width: 15ch;
+    line-height: 1.5rem;
+    word-wrap: break-word;
+    font-weight: 300;
+    line-height: 1.5rem;
+}
+
+.img-square {
+    object-fit: cover;
+    max-height: 30vw;
+    max-width: 30vw;
+}
+
+.img-portrait {
+    object-fit: cover;
+    max-height: 40vw;
+    max-width: 30vw;
 }

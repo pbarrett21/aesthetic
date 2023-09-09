@@ -7,7 +7,12 @@ const Text = {
     designExpertise: 'With a diverse portfolio of successful projects, we possess the expertise to handle a wide range of design challenges',
     innovative: 'We\'re committed to staying ahead of design trends and technology. Our desings combine timeless elegance',
     clientCentric: 'Your satisfaction is our priority. We collaborate closely with you, ensuring your preferences and needs are integrated seamlessly',
-    tailored: 'We understand that every project comes with a unique budget. Our transparent pricing ensures that you receive the best'
+    tailored: 'We understand that every project comes with a unique budget. Our transparent pricing ensures that you receive the best',
+    dreams: 'Explore our portfolio to witness the magic we\'ve created for our clients. From minimalistic chic to opulent luxury, we\'ve turned dreams into stunning reality',
+    contemporary: 'In this project, we were entrusted with the task of turning a mundane urban apartment into a contemporary oasis. We embraced clean lines, subtle color palettes, and strategic...',
+    rustic: 'Nestled in the heart of nature, this project allowed us to embrace the rustic charm of the countryside while infusing it with a touch of modern comfort. By using natural materials...',
+    spa: 'Our expertise isn\'t limited to residential spaces; we also excel in commercial design. The Minimalist Serenity Spa project exemplifies our ability to create a serene ambiance that fosters relaxation...',
+    elegant: 'Preserving the classic charm of a heritage home while infusing it with modern functionality is an art form we excel in. The Timeless Elegance project was a journey through history and design...'
 }
 
 export default Text

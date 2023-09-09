@@ -4,6 +4,7 @@ import Landing from './components/Landing'
 import Environments from './components/Environments'
 import Wrapper from './components/Wrapper'
 import Extraordinary from './components/Extraordinary'
+import Dreams from './components/Dreams'
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                 <Landing />
                 <Environments />
                 <Extraordinary />
+                <Dreams/>
             </Wrapper>
         </>
     )
