@@ -7,7 +7,7 @@ export interface PanelProps {
 
 const ImagePanel: React.FC<PanelProps> = (props: PanelProps) => {
     return (
-        <div>
+        <div className="panel">
             <img src={props.imageSrc} className={'img-' + props.orientation} />
             <h2>{props.heading}</h2>
             <p>{props.body}</p>

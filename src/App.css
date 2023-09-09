@@ -258,6 +258,7 @@ hr {
 
 .dreams-header h1 {
     max-width: 15ch;
+    margin-top: 0;
     line-height: 4rem;
     word-wrap: break-word;
     font-size: 4rem;
@@ -265,7 +266,7 @@ hr {
 }
 
 .dreams-header p {
-    max-width: 15ch;
+    max-width: 45ch;
     line-height: 1.5rem;
     word-wrap: break-word;
     font-weight: 300;
@@ -274,12 +275,23 @@ hr {
 
 .img-square {
     object-fit: cover;
-    max-height: 30vw;
-    max-width: 30vw;
+    width: 100%;
+    max-height: 45vh;
 }
 
 .img-portrait {
     object-fit: cover;
-    max-height: 40vw;
-    max-width: 30vw;
+    width: 100%;
+    max-height: 45vh;
+}
+
+.panels-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-gap: 3rem;
+}
+
+.panel {
+    width: 47%;
 }

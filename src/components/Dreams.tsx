@@ -35,7 +35,7 @@ const Dreams: React.FC = () => {
                 <h1>Where Dreams Take Shape</h1>
                 <p>{Text.dreams}</p>
             </div>
-            <div>
+            <div className='panels-container'>
                 {panels.map(({imageSrc, heading, body, orientation}) => (
                     <ImagePanel
                         imageSrc={imageSrc}
@@ -45,6 +45,7 @@ const Dreams: React.FC = () => {
                     />
                 ))}
             </div>
+            <hr></hr>
         </>
     )
 }
