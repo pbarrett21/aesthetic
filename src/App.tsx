@@ -5,6 +5,7 @@ import Environments from './components/Environments'
 import Wrapper from './components/Wrapper'
 import Extraordinary from './components/Extraordinary'
 import Dreams from './components/Dreams'
+import Endorsements from './components/Dreams'
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                 <Environments />
                 <Extraordinary />
                 <Dreams/>
+                <Endorsements/>
             </Wrapper>
         </>
     )
