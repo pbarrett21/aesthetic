@@ -1,5 +1,6 @@
 :root {
     --fancy-font: 'DM Serif Display', serif;
+    --orange-accent: #ff6130;
 }
 
 .navBar {
@@ -81,6 +82,14 @@ a:first-child {
     margin: 0;
 }
 
+.action svg {
+    padding-left: 0.6rem;
+}
+
+.action span {
+    display: flex;
+}
+
 .landingParagraph {
     line-height: 1.5rem;
     margin: 1rem 0;
@@ -94,7 +103,7 @@ a:first-child {
 
 .button1 {
     border: none;
-    background-color: #ff6130;
+    background-color: var(--orange-accent);
     color: white;
     margin-right: 1rem;
 }
@@ -294,4 +303,25 @@ hr {
 
 .panel {
     width: 47%;
+}
+
+.panel button {
+    border: none;
+    display: flex;
+    padding: 0.4rem;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.panel button:hover {
+    background-color: var(--orange-accent);
+    cursor: pointer;
+}
+
+.panel svg {
+    color: white;
+}
+
+.panel svg:hover {
+    transform: rotate(-45deg);
 }

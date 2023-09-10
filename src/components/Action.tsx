@@ -1,4 +1,5 @@
 import Text from './../text'
+import Arrow from './Arrow'
 
 const Action: React.FC = () => {
     return (
@@ -9,8 +10,16 @@ const Action: React.FC = () => {
             </div>
             <p className='landingParagraph'>{Text.landingParagraph}</p>
             <div>
-                <button className='button1'>Start a project &#8594;</button>
-                <button className='button2'>View recent work &#8594;</button>
+                <button className='button1'>
+                    <span>
+                        Start a project <Arrow />
+                    </span>
+                </button>
+                <button className='button2'>
+                    <span>
+                        View recent work <Arrow />
+                    </span>
+                </button>
             </div>
         </div>
     )
