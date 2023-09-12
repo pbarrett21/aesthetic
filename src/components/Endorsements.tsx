@@ -30,10 +30,13 @@ const Endorsements: React.FC = () => {
     ]
 
     return (
-        <div className='endorsements'>
-            <h1>Don't just take our word for it.</h1>
-            <Carousel testomonials={testomonials}/>
-        </div>
+        <>
+            <div className='endorsements'>
+                <h1>Don't just take our word for it.</h1>
+                <Carousel testomonials={testomonials}/>
+            </div>
+            <hr></hr>
+        </>
     )
 }
 

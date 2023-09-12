@@ -12,12 +12,12 @@ const Action: React.FC = () => {
             <div>
                 <button className='button1'>
                     <span>
-                        Start a project <Arrow />
+                        Start a project <Arrow right />
                     </span>
                 </button>
                 <button className='button2'>
                     <span>
-                        View recent work <Arrow />
+                        View recent work <Arrow right />
                     </span>
                 </button>
             </div>

@@ -408,6 +408,7 @@ hr {
     line-height: 1.5rem;
     word-wrap: break-word;
     font-weight: 300;
+    text-align: center;
 }
 
 .carousel-text h2 {
@@ -422,4 +423,54 @@ hr {
 .carousel-buttons {
     display: flex;
     align-items: center;
+    margin: 1rem;
+}
+
+.carousel-buttons button {
+    margin: 0 1rem;
+}
+
+.dot {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.dot-active {
+    color: black;
+}
+
+.dot-inactive {
+    color: #c9c9c9;
+}
+
+.action-call {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action-call h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+    font-family: var(--fancy-font);
+    max-width: 20ch;
+    word-wrap: break-word;
+}
+
+.big-arrow {
+    height: 7rem;
+    width: 7rem;
+    background-color: var(--orange-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.big-arrow svg {
+    color: white;
+    transform: rotate(-45deg);
+    stroke-width: 3px;
+    height: 4rem;
+    width: 4rem;
 }

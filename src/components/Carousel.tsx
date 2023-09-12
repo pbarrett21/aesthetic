@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Arrow from './Arrow'
 import Star from './Star'
+import Dot from './Dot'
 
 export interface Testomonial {
     imageSrc: string
@@ -48,7 +49,7 @@ const Carousel: React.FC<CarouselProps> = (props: CarouselProps) => {
                     {Array.from(
                         Array(props.testomonials[activeTestomonialIndex].stars),
                         () => (
-                            <Star/>
+                            <Star />
                         )
                     )}
                 </span>
@@ -61,7 +62,11 @@ const Carousel: React.FC<CarouselProps> = (props: CarouselProps) => {
                 >
                     <Arrow right={false} />
                 </button>
-                <span>dot</span>
+                <span>
+                    {Array.from(Array(3), (_, i) => (
+                        <Dot active={activeTestomonialIndex === i} />
+                    ))}
+                </span>
                 <button
                     disabled={isRightArrowDisabled()}
                     onClick={() => onClickRight()}
