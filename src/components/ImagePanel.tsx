@@ -13,7 +13,7 @@ const ImagePanel: React.FC<PanelProps> = (props: PanelProps) => {
             <img src={props.imageSrc} className={'img-' + props.orientation} />
             <h2>{props.heading}</h2>
             <p>{props.body}</p>
-            <button><Arrow/></button>
+            <button><Arrow right/></button>
         </div>
     )
 }

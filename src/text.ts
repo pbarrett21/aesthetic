@@ -12,7 +12,10 @@ const Text = {
     contemporary: 'In this project, we were entrusted with the task of turning a mundane urban apartment into a contemporary oasis. We embraced clean lines, subtle color palettes, and strategic...',
     rustic: 'Nestled in the heart of nature, this project allowed us to embrace the rustic charm of the countryside while infusing it with a touch of modern comfort. By using natural materials...',
     spa: 'Our expertise isn\'t limited to residential spaces; we also excel in commercial design. The Minimalist Serenity Spa project exemplifies our ability to create a serene ambiance that fosters relaxation...',
-    elegant: 'Preserving the classic charm of a heritage home while infusing it with modern functionality is an art form we excel in. The Timeless Elegance project was a journey through history and design...'
+    elegant: 'Preserving the classic charm of a heritage home while infusing it with modern functionality is an art form we excel in. The Timeless Elegance project was a journey through history and design...',
+    testomonial1: '"I can\'t express how grateful I am for Aesthetic\'s expertise. They completely revamped our office space, turning it into a place of inspiration and productivity. Their creative concepts, color schemes, and furniture choices were spot on."',
+    testomonial2: '"I\'m truly thankful for Aesthetic\'s remarkable expertise. They transformed our workspace into an oasis of creativity and efficiency. Their innovative ideas, color palettes, and furniture selections were absolutely exceptional."',
+    testomonial3: '"I\'m immensely grateful for Aesthetic\'s touch. They\'ve reinvented our workspace, infusing it with inspiration and efficiency through their innovative designs, color selections, and furniture choices."'
 }
 
 export default Text

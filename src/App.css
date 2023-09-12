@@ -232,29 +232,33 @@ hr {
     max-width: 25vw;
 }
 
-.left-side, .right-side {
+.left-side,
+.right-side {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.left-side h2, .left-side p {
+.left-side h2,
+.left-side p {
     text-align: right;
 }
 
-
-.right-side h2, .right-side p {
+.right-side h2,
+.right-side p {
     text-align: left;
 }
 
-.left-side p, .right-side p {
+.left-side p,
+.right-side p {
     max-width: 38ch;
     word-wrap: break-word;
     line-height: 1.5rem;
     font-weight: 300;
 }
 
-.left-side h2, .right-side h2 {
+.left-side h2,
+.right-side h2 {
     font-weight: 500;
     font-size: 1.8rem;
 }
@@ -279,7 +283,6 @@ hr {
     line-height: 1.5rem;
     word-wrap: break-word;
     font-weight: 300;
-    line-height: 1.5rem;
 }
 
 .img-square {
@@ -305,6 +308,12 @@ hr {
     width: 47%;
 }
 
+.panel p {
+    line-height: 1.5rem;
+    word-wrap: break-word;
+    font-weight: 300;
+}
+
 .panel button {
     border: none;
     display: flex;
@@ -324,4 +333,93 @@ hr {
 
 .panel svg:hover {
     transform: rotate(-45deg);
+}
+
+.endorsements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.endorsements h1 {
+    font-family: var(--fancy-font);
+    margin-top: 0;
+    max-width: 20ch;
+    word-wrap: break-word;
+    text-align: center;
+    line-height: 4rem;
+    font-size: 4rem;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel img {
+    margin: 0 2rem;
+}
+
+.carousel .inactive {
+    object-fit: cover;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    object-position: top;
+}
+
+.carousel .active {
+    object-fit: cover;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-position: top;
+}
+
+.carousel button {
+    border: 1px solid transparent;
+    display: flex;
+    padding: 0.4rem;
+    border-radius: 50%;
+    color: white;
+    background-color: var(--orange-accent);
+    cursor: pointer;
+}
+
+.carousel button:disabled {
+    border: 1px solid black;
+    display: flex;
+    padding: 0.4rem;
+    border-radius: 50%;
+    color: black;
+    background-color: #dedede;
+    cursor: default;
+}
+
+.carousel-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-text p {
+    max-width: 68ch;
+    line-height: 1.5rem;
+    word-wrap: break-word;
+    font-weight: 300;
+}
+
+.carousel-text h2 {
+    margin-bottom: 0;
+}
+
+.carousel-text h3 {
+    margin-top: 0.5rem;
+    font-weight: 300;
+}
+
+.carousel-buttons {
+    display: flex;
+    align-items: center;
 }

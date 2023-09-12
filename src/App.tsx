@@ -5,7 +5,7 @@ import Environments from './components/Environments'
 import Wrapper from './components/Wrapper'
 import Extraordinary from './components/Extraordinary'
 import Dreams from './components/Dreams'
-import Endorsements from './components/Dreams'
+import Endorsements from './components/Endorsements'
 
 function App() {
     return (
