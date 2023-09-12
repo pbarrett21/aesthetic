@@ -1,4 +1,5 @@
 import Arrow from './Arrow'
+import FooterIcon from './FooterIcon'
 
 const Transform: React.FC = () => {
     return (
@@ -9,7 +10,7 @@ const Transform: React.FC = () => {
                     <Arrow right />
                 </div>
             </div>
-            <nav>
+            <nav className='footer'>
                 <a href='/'>Aesthetic</a>
                 <ul>
                     <li>Home</li>
@@ -18,11 +19,21 @@ const Transform: React.FC = () => {
                     <li>Projects</li>
                     <li>Contact</li>
                 </ul>
-                <ul>
-                    <li>FB</li>
-                    <li>LI</li>
-                    <li>X</li>
-                    <li>IG</li>
+                <ul className='footerLinks'>
+                    <li>
+                        <FooterIcon facebook />
+                    </li>
+                    <li>
+                        <a href='https://www.linkedin.com/in/pbarrett21/'>
+                            <FooterIcon linkedin />
+                        </a>
+                    </li>
+                    <li>
+                        <FooterIcon twitter />
+                    </li>
+                    <li>
+                        <FooterIcon instagram />
+                    </li>
                 </ul>
             </nav>
         </>
