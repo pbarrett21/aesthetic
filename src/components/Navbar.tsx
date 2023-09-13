@@ -1,3 +1,5 @@
+import Hamburger from '../icons/Hamburger'
+
 const Navbar: React.FC = () => {
     return (
         <nav className='navBar'>
@@ -9,7 +11,8 @@ const Navbar: React.FC = () => {
                 <li>Projects</li>
                 <li>Contact</li>
             </ul>
-            <a href=''>(555) 555-5555</a>
+            <span>(555) 555-5555</span>
+            <Hamburger />
         </nav>
     )
 }

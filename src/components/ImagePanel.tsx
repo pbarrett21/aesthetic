@@ -1,4 +1,4 @@
-import Arrow from "./Arrow"
+import Arrow from "../icons/Arrow"
 
 export interface PanelProps {
     imageSrc: string

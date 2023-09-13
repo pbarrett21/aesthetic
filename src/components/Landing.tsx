@@ -5,11 +5,13 @@ const Landing: React.FC = () => {
     return (
         <>
             <div className='landingPage'>
-                <img
-                    className='img1'
-                    src='/room1.jpeg'
-                    alt='modern living room'
-                />
+                <div className='img1-container'>
+                    <img
+                        className='img1'
+                        src='/room1.jpeg'
+                        alt='modern living room'
+                    />
+                </div>
                 <Action />
                 <Brag />
                 <img

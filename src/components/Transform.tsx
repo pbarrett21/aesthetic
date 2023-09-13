@@ -1,5 +1,5 @@
-import Arrow from './Arrow'
-import FooterIcon from './FooterIcon'
+import Arrow from '../icons/Arrow'
+import FooterIcon from '../icons/FooterIcon'
 
 const Transform: React.FC = () => {
     return (
@@ -12,7 +12,7 @@ const Transform: React.FC = () => {
             </div>
             <nav className='footer'>
                 <a href='/'>Aesthetic</a>
-                <ul>
+                <ul className='footerNav'>
                     <li>Home</li>
                     <li>About us</li>
                     <li>Services</li>

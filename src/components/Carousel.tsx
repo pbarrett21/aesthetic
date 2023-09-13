@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import Arrow from './Arrow'
-import Star from './Star'
-import Dot from './Dot'
+import Arrow from '../icons/Arrow'
+import Star from '../icons/Star'
+import Dot from '../icons/Dot'
 
 export interface Testomonial {
     imageSrc: string
