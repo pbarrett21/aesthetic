@@ -589,3 +589,17 @@ hr {
         transform: translate(3rem, -4rem) rotate(-4deg);
     }
 }
+
+
+
+@media screen and (max-width: 650px) {
+    .navBar a:first-child {
+        font-size: 1rem;
+    }
+
+    .environments-accent img {
+        display: none;
+    }
+
+    .landingPage {}
+}
