@@ -4,7 +4,7 @@ import Text from '../text'
 const Endorsements: React.FC = () => {
     const testomonials: Testomonial[] = [
         {
-            imageSrc: 'src/assets/head1.jpeg',
+            imageSrc: '/head1.jpeg',
             name: 'Oliver Mitchell',
             company: 'CEO of StellarTech Solutions, Inc.',
             stars: 5,
@@ -12,7 +12,7 @@ const Endorsements: React.FC = () => {
             active: false
         },
         {
-            imageSrc: 'src/assets/head2.jpeg',
+            imageSrc: '/head2.jpeg',
             name: 'Sophia Reynolds',
             company: 'CEO of QuantumCraft Innovations',
             stars: 5,
@@ -20,7 +20,7 @@ const Endorsements: React.FC = () => {
             active: true
         },
         {
-            imageSrc: 'src/assets/head3.jpeg',
+            imageSrc: '/head3.jpeg',
             name: 'Isabella Morgan',
             company: 'CEO of Sunflower Enterprises Group',
             stars: 5,

@@ -4,25 +4,25 @@ import ImagePanel, { PanelProps } from './ImagePanel'
 const Dreams: React.FC = () => {
     const panels: PanelProps[] = [
         {
-            imageSrc: 'src/assets/contemporary.jpeg',
+            imageSrc: '/contemporary.jpeg',
             heading: 'Contemporary Chic Apartment',
             body: Text.contemporary,
             orientation: 'square'
         },
         {
-            imageSrc: 'src/assets/rustic.jpeg',
+            imageSrc: '/rustic.jpeg',
             heading: 'Rustic Retreat in the Suburbs',
             body: Text.rustic,
             orientation: 'portrait'
         },
         {
-            imageSrc: 'src/assets/spa.jpeg',
+            imageSrc: '/spa.jpeg',
             heading: 'Minimalist Serenity Spa',
             body: Text.spa,
             orientation: 'portrait'
         },
         {
-            imageSrc: 'src/assets/elegant.jpeg',
+            imageSrc: '/elegant.jpeg',
             heading: 'Timeless Elegance in a Classic Home',
             body: Text.elegant,
             orientation: 'square'

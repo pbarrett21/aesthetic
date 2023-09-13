@@ -15,7 +15,7 @@ const Environments: React.FC = () => {
                         <p>{Text.residentialDesign}</p>
                     </div>
                     <div>
-                        <img src="src/assets/rotate.jpeg"/>
+                        <img src="/rotate.jpeg"/>
                     </div>
                 </div>
                 <div className="env-section">

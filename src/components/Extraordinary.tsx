@@ -16,7 +16,7 @@ const Extraordinary: React.FC = () => {
                             <p>{Text.innovative}</p>
                         </div>
                     </div>
-                    <img src='src/assets/colorful.jpeg' />
+                    <img src='/colorful.jpeg' />
                     <div className="right-side">
                         <div>
                             <h2>Client-Centric Approach</h2>
