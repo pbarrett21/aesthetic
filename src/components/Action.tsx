@@ -1,7 +1,10 @@
 import Text from './../text'
 import Arrow from '../icons/Arrow'
+import useWindowDimensions from '../helpers/useWindowDimensions'
 
 const Action: React.FC = () => {
+    const { width, height } = useWindowDimensions()
+
     return (
         <div className='action'>
             <h1>Design your dream space</h1>
@@ -12,11 +15,13 @@ const Action: React.FC = () => {
                         Start a project <Arrow right />
                     </span>
                 </button>
-                <button className='button2'>
-                    <span>
-                        View recent work <Arrow right />
-                    </span>
-                </button>
+                {width >= 640 && (
+                    <button className='button2'>
+                        <span>
+                            View recent work <Arrow right />
+                        </span>
+                    </button>
+                )}
             </div>
         </div>
     )
