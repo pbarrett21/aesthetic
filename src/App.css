@@ -1,5 +1,5 @@
 :root {
-    --fancy-font: 'DM Serif Display', serif;
+    --fancy-font: "DM Serif Display", serif;
     --orange-accent: #ff6130;
 }
 
@@ -173,12 +173,12 @@ hr {
 .environments h1 {
     font-family: var(--fancy-font);
     font-size: 4rem;
-    width: 60vw;
+    width: 21ch;
     margin-bottom: 1rem;
 }
 
 .environments p {
-    width: 25vw;
+    width: 30ch;
     line-height: 1.5rem;
     font-weight: 300;
 }
@@ -209,11 +209,11 @@ hr {
     object-fit: cover;
     height: 18rem;
     width: 18rem;
-    transform: translate(14rem, -6rem) rotate(-4deg);
+    transform: translateY(-6rem) rotate(-4deg);
+    right: 16vw;
 }
 
 .extraordinary {
-    max-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -551,9 +551,9 @@ hr {
         font-size: 0.8rem;
     }
 
-    .environments-accent img {
+    /* .environments-accent img {
         transform: translate(5rem, -6rem) rotate(-4deg);
-    }
+    } */
 }
 
 @media screen and (max-width: 915px) {
@@ -581,29 +581,31 @@ hr {
         padding: 2rem 0;
     }
 
-    .environments-accent img {
+    /* .environments-accent img {
         transform: translate(10rem, -4rem) rotate(-4deg);
+    } */
+
+    .environments h1 {
+        text-align: center;
+        margin: 0 auto;
     }
 }
 
 @media screen and (max-width: 820px) {
-    .environments-accent img {
+    /* .environments-accent img {
         transform: translate(3rem, -4rem) rotate(-4deg);
-    }
+    } */
 }
-
-
 
 @media screen and (max-width: 650px) {
     .navBar a:first-child {
         font-size: 1rem;
     }
 
-    .environments-accent img {
-        display: none;
+    h1,
+    .environments h1 {
+        font-size: 2.5rem;
     }
-
-    .landingPage {}
 }
 
 .landingPage-mobile {
@@ -641,7 +643,9 @@ hr {
 }
 
 .landingPage-mobile .top .img2-mobile {
-    height: 15rem;
+    height: 29vh;
+    width: 121vw;
+    object-fit: cover;
     position: absolute;
     overflow: hidden;
     right: -6rem;
@@ -649,12 +653,13 @@ hr {
 }
 
 .landingPage-mobile .bottom .img1-mobile {
-    height: 14rem;
+    height: 29vh;
+    width: 58vw;
+    object-fit: cover;
     position: absolute;
     overflow: hidden;
     left: 0;
-    transform: translateY(3rem);
-    z-index: 5;
+    transform: translateY(2rem);
 }
 
 .landingPage-mobile .bottom .brag-container {
@@ -665,4 +670,46 @@ hr {
 .landingPage-mobile .bottom {
     display: flex;
     overflow: hidden;
+}
+
+.environments.mobile {
+    margin: 0 1rem;
+}
+
+.environments.mobile h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.environments.mobile h2 {
+    line-height: 1rem;
+    font-size: 1.5rem;
+}
+
+.environments.mobile .environments-accent {
+    padding: 1.5rem 0;
+}
+
+.environments.mobile .mobile-rotate {
+    right: 0;
+    object-fit: cover;
+    transform: translateY(-6rem) rotate(0deg);
+    width: 30vw;
+}
+
+@media screen and (max-width: 376px) {
+    h1,
+    .landingPage-mobile h1 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    .landingPage-mobile p {
+        font-size: 0.9rem;
+        line-height: 1rem;
+    }
+
+    .environments.mobile .mobile-rotate {
+        display: none;
+    }
 }
