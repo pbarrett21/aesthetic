@@ -1,9 +1,9 @@
-import Action from './Action'
-import Brag from './Brag'
-import useWindowDimensions from '../helpers/useWindowDimensions'
+import Action from "./Action";
+import Brag from "./Brag";
+import useWindowDimensions from "../helpers/useWindowDimensions";
 
 const Landing: React.FC = () => {
-    const { width, height } = useWindowDimensions()
+    const { width } = useWindowDimensions();
 
     if (width >= 640) {
         return (
@@ -26,7 +26,7 @@ const Landing: React.FC = () => {
                 </div>
                 <hr />
             </>
-        )
+        );
     } else {
         return (
             <>
@@ -50,8 +50,8 @@ const Landing: React.FC = () => {
                 </div>
                 <hr></hr>
             </>
-        )
+        );
     }
-}
+};
 
-export default Landing
+export default Landing;

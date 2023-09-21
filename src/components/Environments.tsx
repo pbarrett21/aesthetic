@@ -2,7 +2,7 @@ import Text from "../text";
 import useWindowDimensions from "../helpers/useWindowDimensions";
 
 const Environments: React.FC = () => {
-    const { width, height } = useWindowDimensions();
+    const { width } = useWindowDimensions();
 
     if (width >= 670) {
         return (

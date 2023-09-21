@@ -1,9 +1,9 @@
-import Text from './../text'
-import Arrow from '../icons/Arrow'
-import useWindowDimensions from '../helpers/useWindowDimensions'
+import Text from "./../text";
+import Arrow from "../icons/Arrow";
+import useWindowDimensions from "../helpers/useWindowDimensions";
 
 const Action: React.FC = () => {
-    const { width, height } = useWindowDimensions()
+    const { width } = useWindowDimensions();
 
     return (
         <div className='action'>
@@ -24,7 +24,7 @@ const Action: React.FC = () => {
                 )}
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Action
+export default Action;
