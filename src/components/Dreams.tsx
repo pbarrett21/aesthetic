@@ -1,53 +1,78 @@
-import Text from '../text'
-import ImagePanel, { PanelProps } from './ImagePanel'
+import Text from "../text";
+import ImagePanel, { PanelProps } from "./ImagePanel";
+import useWindowDimensions from "../helpers/useWindowDimensions";
 
 const Dreams: React.FC = () => {
+    const { width } = useWindowDimensions();
+
     const panels: PanelProps[] = [
         {
-            imageSrc: '/contemporary.jpeg',
-            heading: 'Contemporary Chic Apartment',
+            imageSrc: "/contemporary.jpeg",
+            heading: "Contemporary Chic Apartment",
             body: Text.contemporary,
-            orientation: 'square'
+            orientation: "square",
         },
         {
-            imageSrc: '/rustic.jpeg',
-            heading: 'Rustic Retreat in the Suburbs',
+            imageSrc: "/rustic.jpeg",
+            heading: "Rustic Retreat in the Suburbs",
             body: Text.rustic,
-            orientation: 'portrait'
+            orientation: "portrait",
         },
         {
-            imageSrc: '/spa.jpeg',
-            heading: 'Minimalist Serenity Spa',
+            imageSrc: "/spa.jpeg",
+            heading: "Minimalist Serenity Spa",
             body: Text.spa,
-            orientation: 'portrait'
+            orientation: "portrait",
         },
         {
-            imageSrc: '/elegant.jpeg',
-            heading: 'Timeless Elegance in a Classic Home',
+            imageSrc: "/elegant.jpeg",
+            heading: "Timeless Elegance in a Classic Home",
             body: Text.elegant,
-            orientation: 'square'
+            orientation: "square",
         },
-    ]
+    ];
 
-    return (
-        <>
-            <div className='dreams-header'>
-                <h1>Where Dreams Take Shape</h1>
-                <p>{Text.dreams}</p>
+    if (width >= 670) {
+        return (
+            <>
+                <div className='dreams-header'>
+                    <h1>Where Dreams Take Shape</h1>
+                    <p>{Text.dreams}</p>
+                </div>
+                <div className='panels-container'>
+                    {panels.map(({ imageSrc, heading, body, orientation }) => (
+                        <ImagePanel
+                            imageSrc={imageSrc}
+                            heading={heading}
+                            body={body}
+                            orientation={orientation}
+                        />
+                    ))}
+                </div>
+                <hr></hr>
+            </>
+        );
+    } else {
+        return (
+            <div className='dreams-mobile'>
+                <div className='dreams-header mobile'>
+                    <h1>Where Dreams Take Shape</h1>
+                    <p>{Text.dreams}</p>
+                </div>
+                <div className='panels-container'>
+                    {panels.map(({ imageSrc, heading, body, orientation }) => (
+                        <ImagePanel
+                            imageSrc={imageSrc}
+                            heading={heading}
+                            body={body}
+                            orientation={orientation}
+                        />
+                    ))}
+                </div>
+                <hr></hr>
             </div>
-            <div className='panels-container'>
-                {panels.map(({imageSrc, heading, body, orientation}) => (
-                    <ImagePanel
-                        imageSrc={imageSrc}
-                        heading={heading}
-                        body={body}
-                        orientation={orientation}
-                    />
-                ))}
-            </div>
-            <hr></hr>
-        </>
-    )
-}
+        );
+    }
+};
 
-export default Dreams
+export default Dreams;

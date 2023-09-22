@@ -199,7 +199,7 @@ hr {
 
 .environments-accent {
     background-color: #d0d0d0;
-    margin: 0 !important;
+    margin: 0;
     padding: 1.5rem 0 1.5rem 4rem;
     display: flex;
 }
@@ -672,10 +672,6 @@ hr {
     overflow: hidden;
 }
 
-.environments.mobile {
-    margin: 0 1rem;
-}
-
 .environments.mobile h1 {
     font-size: 2rem;
     line-height: 2rem;
@@ -687,7 +683,15 @@ hr {
 }
 
 .environments.mobile .environments-accent {
-    padding: 1.5rem 0;
+    padding: 1.5rem 0 1.5rem 1rem;
+}
+
+.environments.mobile .environments-accent p {
+    width: 26ch;
+}
+
+.environments.mobile .env-section {
+    margin-left: 1rem;
 }
 
 .environments.mobile .mobile-rotate {
@@ -695,6 +699,60 @@ hr {
     object-fit: cover;
     transform: translateY(-6rem) rotate(0deg);
     width: 30vw;
+}
+
+.extraordinary.mobile h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.extraordinary.mobile h2 {
+    line-height: 1rem;
+    font-size: 1.5rem;
+}
+
+.bottom-panel.mobile {
+    flex-direction: column;
+}
+
+.bottom-panel.mobile img {
+    max-width: none;
+    height: 25vh;
+}
+
+.dreams-mobile {
+    margin: 0 1rem;
+}
+
+.dreams-header.mobile {
+    flex-direction: column;
+    justify-content: unset;
+    align-items: flex-start;
+}
+
+.dreams-header.mobile h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+    margin-bottom: 0;
+}
+
+.endorsements.mobile h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.carousel.mobile .active {
+    height: 7rem;
+    width: 7rem;
+}
+
+.carousel.mobile .inactive {
+    height: 3.5rem;
+    width: 3.5rem;
+}
+
+.carousel.mobile img {
+    margin: 0 1rem;
 }
 
 @media screen and (max-width: 376px) {
@@ -707,9 +765,5 @@ hr {
     .landingPage-mobile p {
         font-size: 0.9rem;
         line-height: 1rem;
-    }
-
-    .environments.mobile .mobile-rotate {
-        display: none;
     }
 }
