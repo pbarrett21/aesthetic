@@ -462,7 +462,7 @@ hr {
     font-size: 4rem;
     line-height: 4rem;
     font-family: var(--fancy-font);
-    max-width: 20ch;
+    max-width: 18ch;
     word-wrap: break-word;
 }
 
@@ -741,6 +741,10 @@ hr {
     line-height: 2rem;
 }
 
+.carousel.mobile {
+    margin: 0 1rem;
+}
+
 .carousel.mobile .active {
     height: 7rem;
     width: 7rem;
@@ -753,6 +757,29 @@ hr {
 
 .carousel.mobile img {
     margin: 0 1rem;
+}
+
+.carousel.mobile .carousel-text p {
+    height: 7rem;
+}
+
+.call-mobile {
+    margin: 0 1rem;
+}
+
+.action-call.mobile h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.call-mobile .big-arrow {
+    height: 5rem;
+    width: 5rem;
+}
+
+.call-mobile .big-arrow svg {
+    height: 2rem;
+    width: 2rem;
 }
 
 @media screen and (max-width: 376px) {
