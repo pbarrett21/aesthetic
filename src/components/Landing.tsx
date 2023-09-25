@@ -15,10 +15,13 @@ const Landing: React.FC = () => {
                 ease: 'power3.out',
             },
         })
-        timeLine
+
+        if (width < 640) {
+            timeLine
             .fromTo('.img2-mobile', { x: 500 }, { x: 0 })
             .fromTo('.action', { opacity: 0 }, { opacity: 1 })
             .fromTo('.bottom', { x: -500 }, { x: 0 })
+        }
 
         return () => {
             timeLine.kill()
