@@ -643,7 +643,7 @@ hr {
 }
 
 .landingPage-mobile .top .img2-mobile {
-    height: 29vh;
+    height: 27vh;
     width: 121vw;
     object-fit: cover;
     position: absolute;
@@ -653,7 +653,7 @@ hr {
 }
 
 .landingPage-mobile .bottom .img1-mobile {
-    height: 29vh;
+    height: 27vh;
     width: 58vw;
     object-fit: cover;
     position: absolute;
