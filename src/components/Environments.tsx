@@ -1,10 +1,12 @@
 import Text from '../text'
 import useWindowDimensions from '../helpers/useWindowDimensions'
 import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLayoutEffect, useRef } from 'react'
 
 const Environments: React.FC = () => {
     const { width } = useWindowDimensions()
+    gsap.registerPlugin(ScrollTrigger);
     const mobileH1 = useRef(null)
     const section1 = useRef(null)
     const section2 = useRef(null)
@@ -15,7 +17,7 @@ const Environments: React.FC = () => {
             delay: 0,
             scrollTrigger: {
                 trigger: mobileH1.current,
-                start: 'top center',
+                start: 'top bottom',
             },
             defaults: {
                 overwrite: 'auto',
@@ -25,9 +27,9 @@ const Environments: React.FC = () => {
         })
 
         if (width < 670) {
-            tl.fromTo(section1.current, { x: -500 }, { x: 0 })
-                .fromTo(section2.current, { x: -500 }, { x: 0 })
-                .fromTo(section3.current, { x: -500 }, { x: 0 })
+            tl.fromTo(section1.current, { opacity: 0 }, { opacity: 1 })
+                .fromTo(section2.current, { opacity: 0 }, { opacity: 1 })
+                .fromTo(section3.current, { opacity: 0 }, { opacity: 1 })
         }
 
         return () => {
