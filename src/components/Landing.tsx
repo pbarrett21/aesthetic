@@ -20,7 +20,9 @@ const Landing: React.FC = () => {
             .fromTo('.action', { opacity: 0 }, { opacity: 1 })
             .fromTo('.bottom', { x: -500 }, { x: 0 })
 
-            return () => timeLine.kill()
+        return () => {
+            timeLine.kill()
+        }
     })
 
     if (width >= 640) {
