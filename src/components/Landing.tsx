@@ -23,7 +23,7 @@ const Landing: React.FC = () => {
         return () => {
             timeLine.kill()
         }
-    })
+    }, [])
 
     if (width >= 640) {
         return (
