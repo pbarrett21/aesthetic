@@ -1,8 +1,41 @@
-import Text from "../text";
-import useWindowDimensions from "../helpers/useWindowDimensions";
+import Text from '../text'
+import useWindowDimensions from '../helpers/useWindowDimensions'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useLayoutEffect } from 'react'
 
 const Extraordinary: React.FC = () => {
-    const { width } = useWindowDimensions();
+    const { width } = useWindowDimensions()
+    gsap.registerPlugin(ScrollTrigger);
+
+    useLayoutEffect(() => {
+        if (width < 670) {
+            const tl = gsap.timeline({
+                delay: 0,
+                scrollTrigger: {
+                    trigger: '.extraordinary.mobile',
+                    start: 'top bottom',
+                },
+                defaults: {
+                    duration: 0.8,
+                    ease: 'power3.out',
+                },
+            })
+
+            tl.fromTo('.bottom-panel.mobile', { x: -500 }, { x: 0 })
+                .fromTo(
+                    '.bottom-panel.mobile img',
+                    { opacity: 0 },
+                    { opacity: 1 }
+                )
+                .fromTo('.right-side.mobile', { x: 500 }, { x: 0 })
+
+            return () => {
+                tl.kill()
+            }
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     if (width >= 670) {
         return (
@@ -35,7 +68,7 @@ const Extraordinary: React.FC = () => {
                 </div>
                 <hr />
             </>
-        );
+        )
     } else {
         return (
             <>
@@ -53,7 +86,7 @@ const Extraordinary: React.FC = () => {
                             </div>
                         </div>
                         <img src='/colorful.jpeg' />
-                        <div className='right-side'>
+                        <div className='right-side mobile'>
                             <div>
                                 <h2>Client-Centric Approach</h2>
                                 <p>{Text.clientCentric}</p>
@@ -67,8 +100,8 @@ const Extraordinary: React.FC = () => {
                 </div>
                 <hr />
             </>
-        );
+        )
     }
-};
+}
 
-export default Extraordinary;
+export default Extraordinary

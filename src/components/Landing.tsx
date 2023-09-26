@@ -26,6 +26,7 @@ const Landing: React.FC = () => {
         return () => {
             timeLine.kill()
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     if (width >= 640) {

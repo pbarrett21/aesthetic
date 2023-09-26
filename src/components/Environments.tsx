@@ -20,7 +20,6 @@ const Environments: React.FC = () => {
                 start: 'top bottom',
             },
             defaults: {
-                overwrite: 'auto',
                 duration: 0.8,
                 ease: 'power3.out',
             },
@@ -35,6 +34,7 @@ const Environments: React.FC = () => {
         return () => {
             tl.kill()
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     if (width >= 670) {

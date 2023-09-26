@@ -297,13 +297,13 @@ hr {
 .img-square {
     object-fit: cover;
     width: 100%;
-    max-height: 45vh;
+    height: 45vh;
 }
 
 .img-portrait {
     object-fit: cover;
     width: 100%;
-    max-height: 45vh;
+    height: 45vh;
 }
 
 .panels-container {
