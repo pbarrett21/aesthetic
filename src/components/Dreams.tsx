@@ -9,7 +9,7 @@ const Dreams: React.FC = () => {
 
     useLayoutEffect(() => {
         if (width < 670) {
-            const panels = gsap.utils.toArray('.panel')
+            const panels = gsap.utils.toArray<HTMLElement>('.panel')
 
             panels.forEach((panel) => {
                 gsap.set(panel, { opacity: 0 })
