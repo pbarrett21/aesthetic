@@ -14,8 +14,31 @@
     padding: 0 3rem;
 }
 
-.navBar .hamburger-menu {
+.navBar button {
     display: none;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+.sideMenu {
+    position: absolute;
+    height: 50vh;
+    width: 60vw;
+    right: 5px;
+    top: 5px;
+    border-radius: 5px;
+    background-color: #85402c;
+}
+
+.sideMenu .top-menu {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem;
+}
+
+.sideMenu .xMenu {
+    color: white;
 }
 
 ul {
@@ -557,7 +580,7 @@ hr {
 }
 
 @media screen and (max-width: 915px) {
-    .navBar .hamburger-menu {
+    .navBar button {
         display: unset;
     }
 
