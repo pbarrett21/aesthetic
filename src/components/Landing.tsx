@@ -1,9 +1,33 @@
-import Action from "./Action";
-import Brag from "./Brag";
-import useWindowDimensions from "../helpers/useWindowDimensions";
+import Action from './Action'
+import Brag from './Brag'
+import useWindowDimensions from '../helpers/useWindowDimensions'
+import { gsap } from 'gsap'
+import { useLayoutEffect } from 'react'
 
 const Landing: React.FC = () => {
-    const { width } = useWindowDimensions();
+    const { width } = useWindowDimensions()
+
+    useLayoutEffect(() => {
+        const timeLine = gsap.timeline({
+            delay: 0,
+            defaults: {
+                duration: 0.8,
+                ease: 'power3.out',
+            },
+        })
+
+        if (width < 640) {
+            timeLine
+            .fromTo('.img2-mobile', { x: 500 }, { x: 0 })
+            .fromTo('.action', { opacity: 0 }, { opacity: 1 })
+            .fromTo('.bottom', { x: -500 }, { x: 0 })
+        }
+
+        return () => {
+            timeLine.kill()
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     if (width >= 640) {
         return (
@@ -26,7 +50,7 @@ const Landing: React.FC = () => {
                 </div>
                 <hr />
             </>
-        );
+        )
     } else {
         return (
             <>
@@ -50,8 +74,8 @@ const Landing: React.FC = () => {
                 </div>
                 <hr></hr>
             </>
-        );
+        )
     }
-};
+}
 
-export default Landing;
+export default Landing

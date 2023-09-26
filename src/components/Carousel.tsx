@@ -1,38 +1,38 @@
-import { useState } from "react";
-import Arrow from "../icons/Arrow";
-import Star from "../icons/Star";
-import Dot from "../icons/Dot";
-import useWindowDimensions from "../helpers/useWindowDimensions";
+import { useState } from 'react'
+import Arrow from '../icons/Arrow'
+import Star from '../icons/Star'
+import Dot from '../icons/Dot'
+import useWindowDimensions from '../helpers/useWindowDimensions'
 
 export interface Testomonial {
-    imageSrc: string;
-    name: string;
-    company: string;
-    stars: number;
-    quote: string;
-    active: boolean;
+    imageSrc: string
+    name: string
+    company: string
+    stars: number
+    quote: string
+    active: boolean
 }
 
 export interface CarouselProps {
-    testomonials: Testomonial[];
+    testomonials: Testomonial[]
 }
 
 const Carousel: React.FC<CarouselProps> = (props: CarouselProps) => {
-    const [activeTestomonialIndex, setActive] = useState(1);
-    const { width } = useWindowDimensions();
+    const [activeTestomonialIndex, setActive] = useState(1)
+    const { width } = useWindowDimensions()
 
     const onClickLeft = () => {
-        props.testomonials[activeTestomonialIndex].active = false;
-        props.testomonials[activeTestomonialIndex - 1].active = true;
-        setActive(activeTestomonialIndex - 1);
-    };
+        props.testomonials[activeTestomonialIndex].active = false
+        props.testomonials[activeTestomonialIndex - 1].active = true
+        setActive(activeTestomonialIndex - 1)
+    }
     const onClickRight = () => {
-        props.testomonials[activeTestomonialIndex].active = false;
-        props.testomonials[activeTestomonialIndex + 1].active = true;
-        setActive(activeTestomonialIndex + 1);
-    };
-    const isLeftArrowDisabled = () => activeTestomonialIndex === 0;
-    const isRightArrowDisabled = () => activeTestomonialIndex === 2;
+        props.testomonials[activeTestomonialIndex].active = false
+        props.testomonials[activeTestomonialIndex + 1].active = true
+        setActive(activeTestomonialIndex + 1)
+    }
+    const isLeftArrowDisabled = () => activeTestomonialIndex === 0
+    const isRightArrowDisabled = () => activeTestomonialIndex === 2
 
     if (width >= 670) {
         return (
@@ -40,7 +40,8 @@ const Carousel: React.FC<CarouselProps> = (props: CarouselProps) => {
                 <div>
                     {props.testomonials.map(({ imageSrc, active }) => (
                         <img
-                            className={active ? "active" : "inactive"}
+                            key={imageSrc}
+                            className={active ? 'active' : 'inactive'}
                             src={imageSrc}
                         />
                     ))}
@@ -55,8 +56,8 @@ const Carousel: React.FC<CarouselProps> = (props: CarouselProps) => {
                             Array(
                                 props.testomonials[activeTestomonialIndex].stars
                             ),
-                            () => (
-                                <Star />
+                            (_, i) => (
+                                <Star key={i}/>
                             )
                         )}
                     </span>
@@ -71,7 +72,10 @@ const Carousel: React.FC<CarouselProps> = (props: CarouselProps) => {
                     </button>
                     <span>
                         {Array.from(Array(3), (_, i) => (
-                            <Dot active={activeTestomonialIndex === i} />
+                            <Dot
+                                key={i}
+                                active={activeTestomonialIndex === i}
+                            />
                         ))}
                     </span>
                     <button
@@ -82,14 +86,15 @@ const Carousel: React.FC<CarouselProps> = (props: CarouselProps) => {
                     </button>
                 </div>
             </div>
-        );
+        )
     } else {
         return (
             <div className='carousel mobile'>
                 <div>
                     {props.testomonials.map(({ imageSrc, active }) => (
                         <img
-                            className={active ? "active" : "inactive"}
+                            key={imageSrc}
+                            className={active ? 'active' : 'inactive'}
                             src={imageSrc}
                         />
                     ))}
@@ -104,8 +109,8 @@ const Carousel: React.FC<CarouselProps> = (props: CarouselProps) => {
                             Array(
                                 props.testomonials[activeTestomonialIndex].stars
                             ),
-                            () => (
-                                <Star />
+                            (_, i) => (
+                                <Star key={i}/>
                             )
                         )}
                     </span>
@@ -120,7 +125,7 @@ const Carousel: React.FC<CarouselProps> = (props: CarouselProps) => {
                     </button>
                     <span>
                         {Array.from(Array(3), (_, i) => (
-                            <Dot active={activeTestomonialIndex === i} />
+                            <Dot key={i} active={activeTestomonialIndex === i} />
                         ))}
                     </span>
                     <button
@@ -131,8 +136,8 @@ const Carousel: React.FC<CarouselProps> = (props: CarouselProps) => {
                     </button>
                 </div>
             </div>
-        );
+        )
     }
-};
+}
 
-export default Carousel;
+export default Carousel
