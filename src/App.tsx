@@ -7,8 +7,11 @@ import Extraordinary from './components/Extraordinary'
 import Dreams from './components/Dreams'
 import Endorsements from './components/Endorsements'
 import Transform from './components/Transform'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { gsap } from 'gsap'
 
 function App() {
+    gsap.registerPlugin(ScrollTrigger);
     return (
         <>
             <Navbar />

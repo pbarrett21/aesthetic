@@ -2,52 +2,33 @@ import Text from '../text'
 import ImagePanel, { PanelProps } from './ImagePanel'
 import useWindowDimensions from '../helpers/useWindowDimensions'
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLayoutEffect } from 'react'
 
 const Dreams: React.FC = () => {
     const { width } = useWindowDimensions()
-    gsap.registerPlugin(ScrollTrigger)
 
     useLayoutEffect(() => {
         if (width < 670) {
-            const tl = gsap.timeline({
-                delay: 0,
-                defaults: {
+            const panels = gsap.utils.toArray('.panel')
+
+            panels.forEach((panel) => {
+                gsap.set(panel, { opacity: 0 })
+
+                gsap.to(panel, {
+                    opacity: 1,
                     duration: 0.8,
                     ease: 'power3.out',
                     scrollTrigger: {
-                        trigger: '.dreams-mobile .dreams-header.mobile h1',
-                        start: 'top bottom',
-                        markers: true,
-                        immediateRender: false
+                        trigger: panel,
+                        start: 'top center',
+                        end: 'top center',
+                        // markers: true
                     },
-                },
+                })
             })
-
-            gsap.set('.panels-container .panel-0', { opacity: 0 })
-            gsap.set('.panels-container .panel-1', { opacity: 0 })
-            gsap.set('.panels-container .panel-2', { opacity: 0 })
-            gsap.set('.panels-container .panel-3', { opacity: 0 })
-
-            tl.to('.panels-container .panel-0', {
-                opacity: 1,
-            })
-                .to('.panels-container .panel-1', {
-                    opacity: 1,
-                })
-                .to('.panels-container .panel-2', {
-                    opacity: 1,
-                })
-                .to('.panels-container .panel-3', {
-                    opacity: 1,
-                })
-
-            return () => {
-                tl.kill()
-            }
         }
-    })
+
+    }, [])
 
     const panels: PanelProps[] = [
         {

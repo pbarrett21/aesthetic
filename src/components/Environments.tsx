@@ -1,12 +1,10 @@
 import Text from '../text'
 import useWindowDimensions from '../helpers/useWindowDimensions'
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLayoutEffect, useRef } from 'react'
 
 const Environments: React.FC = () => {
     const { width } = useWindowDimensions()
-    gsap.registerPlugin(ScrollTrigger);
     const mobileH1 = useRef(null)
     const section1 = useRef(null)
     const section2 = useRef(null)
@@ -17,7 +15,8 @@ const Environments: React.FC = () => {
             delay: 0,
             scrollTrigger: {
                 trigger: mobileH1.current,
-                start: 'top bottom',
+                start: 'top center',
+                // markers: true
             },
             defaults: {
                 duration: 0.8,

@@ -1,40 +1,38 @@
 import Text from '../text'
 import useWindowDimensions from '../helpers/useWindowDimensions'
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useLayoutEffect } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 
 const Extraordinary: React.FC = () => {
     const { width } = useWindowDimensions()
-    gsap.registerPlugin(ScrollTrigger);
+    const panel = useRef(null)
+    const left = useRef(null)
+    const img = useRef(null)
+    const right = useRef(null)
 
     useLayoutEffect(() => {
-        if (width < 670) {
-            const tl = gsap.timeline({
-                delay: 0,
-                scrollTrigger: {
-                    trigger: '.extraordinary.mobile',
-                    start: 'top bottom',
-                },
-                defaults: {
-                    duration: 0.8,
-                    ease: 'power3.out',
-                },
-            })
+        const tl1 = gsap.timeline({
+            delay: 0,
+            scrollTrigger: {
+                trigger: panel.current,
+                // markers: true,
+                start: 'top center',
+            },
+            defaults: {
+                duration: 0.8,
+                ease: 'power3.out',
+            },
+        })
 
-            tl.fromTo('.bottom-panel.mobile', { x: -500 }, { x: 0 })
-                .fromTo(
-                    '.bottom-panel.mobile img',
-                    { opacity: 0 },
-                    { opacity: 1 }
-                )
-                .fromTo('.right-side.mobile', { x: 500 }, { x: 0 })
+        if (width < 670) {
+            // tl1.fromTo(left.current, { x: -500 }, { x: 0 })
+                // .fromTo(img.current, { opacity: 0 }, { opacity: 1 })
+                // .fromTo(right.current, { x: 500 }, { x: 0 })
 
             return () => {
-                tl.kill()
+                tl1.kill()
             }
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     if (width >= 670) {
@@ -74,8 +72,8 @@ const Extraordinary: React.FC = () => {
             <>
                 <div className='extraordinary mobile'>
                     <h1>Unveiling the Extraordinary</h1>
-                    <div className='bottom-panel mobile'>
-                        <div className='left-side'>
+                    <div ref={panel} className='bottom-panel mobile'>
+                        <div ref={left} className='left-side'>
                             <div>
                                 <h2>Design Expertise</h2>
                                 <p>{Text.designExpertise}</p>
@@ -85,8 +83,8 @@ const Extraordinary: React.FC = () => {
                                 <p>{Text.innovative}</p>
                             </div>
                         </div>
-                        <img src='/colorful.jpeg' />
-                        <div className='right-side mobile'>
+                        <img ref={img} src='/colorful.jpeg' />
+                        <div ref={right} className='right-side mobile'>
                             <div>
                                 <h2>Client-Centric Approach</h2>
                                 <p>{Text.clientCentric}</p>
