@@ -11,28 +11,36 @@ const Extraordinary: React.FC = () => {
     const right = useRef(null)
 
     useLayoutEffect(() => {
-        const tl1 = gsap.timeline({
-            delay: 0,
+        console.log('panel.current', panel.current)
+        console.log('left.current', left.current)
+        console.log('img.current', img.current)
+        console.log('right.current', right.current)
+
+        gsap.set(left.current, { opacity: 0 })
+        gsap.set(img.current, { opacity: 0 })
+        gsap.set(right.current, { opacity: 0 })
+
+        gsap.to(left.current, {
+            opacity: 1,
             scrollTrigger: {
-                trigger: panel.current,
-                // markers: true,
-                start: 'top center',
-            },
-            defaults: {
-                duration: 0.8,
-                ease: 'power3.out',
+                trigger: left.current,
+                start: 'top 65%',
             },
         })
-
-        if (width < 670) {
-            // tl1.fromTo(left.current, { x: -500 }, { x: 0 })
-                // .fromTo(img.current, { opacity: 0 }, { opacity: 1 })
-                // .fromTo(right.current, { x: 500 }, { x: 0 })
-
-            return () => {
-                tl1.kill()
-            }
-        }
+        gsap.to(img.current, {
+            opacity: 1,
+            scrollTrigger: {
+                trigger: img.current,
+                start: 'top 65%',
+            },
+        })
+        gsap.to(right.current, {
+            opacity: 1,
+            scrollTrigger: {
+                trigger: right.current,
+                start: 'top 65%',
+            },
+        })
     }, [])
 
     if (width >= 670) {

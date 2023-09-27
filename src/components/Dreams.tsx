@@ -20,14 +20,11 @@ const Dreams: React.FC = () => {
                     ease: 'power3.out',
                     scrollTrigger: {
                         trigger: panel,
-                        start: 'top center',
-                        end: 'top center',
-                        // markers: true
+                        start: 'top 65%',
                     },
                 })
             })
         }
-
     }, [])
 
     const panels: PanelProps[] = [

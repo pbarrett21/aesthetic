@@ -1,9 +1,9 @@
 :root {
-  box-sizing: border-box;
-  background-color: #DEDEDE;
-  font-family: sans-serif;
+    box-sizing: border-box;
+    background-color: #dedede;
+    font-family: sans-serif;
 }
 
 body {
-  margin: 0;
+    margin: 0;
 }

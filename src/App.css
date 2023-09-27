@@ -761,7 +761,7 @@ hr {
 }
 
 .bottom-panel.mobile img {
-    max-width: none;
+    max-width: unset;
     height: 25vh;
 }
 

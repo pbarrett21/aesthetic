@@ -18,15 +18,23 @@ const Landing: React.FC = () => {
 
         if (width < 640) {
             timeLine
-            .fromTo('.img2-mobile', { x: 500 }, { x: 0 })
-            .fromTo('.action', { opacity: 0 }, { opacity: 1 })
-            .fromTo('.bottom', { x: -500 }, { x: 0 })
+                .fromTo(
+                    '.img2-mobile',
+                    { x: 500, opacity: 0 },
+                    { x: 0, opacity: 1 }
+                )
+                .fromTo('.action', { opacity: 0 }, { opacity: 1 })
+                .fromTo(
+                    '.bottom',
+                    { x: -500, opacity: 0 },
+                    { x: 0, opacity: 1 }
+                )
         }
 
         return () => {
             timeLine.kill()
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     if (width >= 640) {
