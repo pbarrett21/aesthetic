@@ -19,6 +19,7 @@
     border: none;
     background-color: transparent;
     padding: 0;
+    height: 24px;
 }
 
 .sideMenu {
@@ -29,6 +30,10 @@
     top: 5px;
     border-radius: 5px;
     background-color: #85402c;
+}
+
+.hamburger-menu {
+    color: black;
 }
 
 .sideMenu .top-menu {
@@ -639,7 +644,7 @@ hr {
 
 @media screen and (max-width: 650px) {
     .navBar a:first-child {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     h1,
