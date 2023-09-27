@@ -15,8 +15,7 @@ const Environments: React.FC = () => {
             delay: 0,
             scrollTrigger: {
                 trigger: mobileH1.current,
-                start: 'top center',
-                // markers: true
+                start: 'top 60%',
             },
             defaults: {
                 duration: 0.8,
@@ -33,7 +32,7 @@ const Environments: React.FC = () => {
         return () => {
             tl.kill()
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     if (width >= 670) {

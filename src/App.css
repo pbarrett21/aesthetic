@@ -1,5 +1,5 @@
 :root {
-    --fancy-font: "DM Serif Display", serif;
+    --fancy-font: 'DM Serif Display', serif;
     --orange-accent: #ff6130;
 }
 
@@ -41,14 +41,31 @@
     color: white;
 }
 
-ul {
+.headerLinks,
+.menuLinks,
+.footerNav,
+.footerLinks {
     list-style: none;
     display: flex;
     padding: 0;
 }
 
-li {
+.headerLinks li,
+.footerNav li {
     padding: 1.25rem;
+}
+
+.menuLinks {
+    height: 35vh;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.menuLinks li {
+    color: white;
+    font-size: 1.7rem;
+    margin-right: 1rem;
 }
 
 a {
@@ -588,7 +605,7 @@ hr {
         display: none;
     }
 
-    .navBar ul {
+    .navBar .headerLinks {
         display: none;
     }
 
