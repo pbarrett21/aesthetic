@@ -11,36 +11,33 @@ const Extraordinary: React.FC = () => {
     const right = useRef(null)
 
     useLayoutEffect(() => {
-        console.log('panel.current', panel.current)
-        console.log('left.current', left.current)
-        console.log('img.current', img.current)
-        console.log('right.current', right.current)
+        if (width < 670) {
+            gsap.set(left.current, { opacity: 0 })
+            gsap.set(img.current, { opacity: 0 })
+            gsap.set(right.current, { opacity: 0 })
 
-        gsap.set(left.current, { opacity: 0 })
-        gsap.set(img.current, { opacity: 0 })
-        gsap.set(right.current, { opacity: 0 })
-
-        gsap.to(left.current, {
-            opacity: 1,
-            scrollTrigger: {
-                trigger: left.current,
-                start: 'top 65%',
-            },
-        })
-        gsap.to(img.current, {
-            opacity: 1,
-            scrollTrigger: {
-                trigger: img.current,
-                start: 'top 65%',
-            },
-        })
-        gsap.to(right.current, {
-            opacity: 1,
-            scrollTrigger: {
-                trigger: right.current,
-                start: 'top 65%',
-            },
-        })
+            gsap.to(left.current, {
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: left.current,
+                    start: 'top 65%',
+                },
+            })
+            gsap.to(img.current, {
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: img.current,
+                    start: 'top 65%',
+                },
+            })
+            gsap.to(right.current, {
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: right.current,
+                    start: 'top 65%',
+                },
+            })
+        }
     }, [])
 
     if (width >= 670) {
